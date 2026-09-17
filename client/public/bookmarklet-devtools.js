@@ -12,3 +12,6 @@ const _0x50f222=_0x58cb;(function(_0x2d327e,_0x14d255){const _0x305bb7=_0x58cb,_
   `;
   (document.head || document.documentElement).appendChild(css);
 })();
+
+/* safari-bookmarklet-visible-labels */
+setTimeout(function(){document.querySelectorAll('button').forEach(function(button){var text=button.textContent&&button.textContent.trim();if(text==='Elements')button.textContent='Element';else if(text==='Network')button.textContent='Web Network';});},0);

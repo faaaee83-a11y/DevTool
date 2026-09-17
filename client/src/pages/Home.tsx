@@ -21,7 +21,7 @@ export default function Home() {
   const origin = typeof window === "undefined" ? "https://safarbmklt-ap3sy5ke.manus.space" : window.location.origin;
   const bookmarklet = useMemo(() => makeBookmarklet(), []);
   const handleCopy = async () => { if (await copyText(bookmarklet)) { setCopied(true); window.setTimeout(() => setCopied(false), 1800); } };
-  const runHere = () => { if (running) { window.location.reload(); return; } const script=document.createElement("script"); script.id="__bookmarklet_devtools__"; script.src=new URL("bookmarklet-devtools.js?installer=1", document.baseURI).href; script.onload=()=>setRunning(true); script.onerror=()=>alert("DevTools本体の読み込みに失敗しました"); document.head.appendChild(script); };
+  const runHere = () => { if (running) { window.location.reload(); return; } const script=document.createElement("script"); script.id="__bookmarklet_devtools__"; script.src=new URL("bookmarklet-devtools-v136b3f0.js", document.baseURI).href; script.onload=()=>setRunning(true); script.onerror=()=>alert("DevTools本体の読み込みに失敗しました"); document.head.appendChild(script); };
   const pickWebElement = () => {
     const old = document.getElementById("__web_element_picker__");
     if (old) { old.remove(); return; }

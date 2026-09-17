@@ -14,8 +14,8 @@ function Router() {
       <Route path={"/DevTool"} component={Home} />
       <Route path={"/DevTool/"} component={Home} />
       <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
+      {/* GitHub Pages serves this app below /DevTool/; fall back to the landing page for that host. */}
+      <Route component={Home} />
     </Switch>
   );
 }
